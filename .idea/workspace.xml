@@ -68,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/dangdangapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="139" column="36" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+              <caret line="139" column="2" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -316,12 +316,12 @@
       <workItem from="1558832818205" duration="22884000" />
       <workItem from="1558870098001" duration="387000" />
       <workItem from="1558870515341" duration="181000" />
-      <workItem from="1558870727694" duration="2336000" />
+      <workItem from="1558870727694" duration="2647000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400734000" />
+    <option name="totallyTimeSpent" value="401045000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -620,7 +620,7 @@
     <entry file="file://$PROJECT_DIR$/dangdangapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
-          <caret line="139" column="36" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+          <caret line="139" column="2" selection-start-line="139" selection-start-column="2" selection-end-line="139" selection-end-column="2" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
