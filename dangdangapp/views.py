@@ -85,8 +85,8 @@ def registerlogic(request):  #注册逻辑函数
                 send_email(username, username)
                 if u1.has_confirm == True:
                     return res1
-                else:
-                    return redirect('dangdangapp:delindex')
+
+                return redirect('dangdangapp:delindex')
 
     # except:
     #     return render(request,'dangdangapp/register.html')
@@ -201,7 +201,7 @@ def indent(request):
     if username:
         t = TUser.objects.get(u_email=username)
         addr = TAddress.objects.filter(user_id=t.id)
-        # print(addr,159)
+        print(addr,159)
         username = request.COOKIES.get("username")
         if username==None:
             flag_cart='flag_indent'
@@ -221,21 +221,18 @@ def create_order(request):
     g = request.GET.get('ship_man4')
     h = request.GET.get('ship_man5')
     c1 = request.GET.get('c1')
+    print(c1)
     if c1:
-        pass
+        cc = TOrder.objects.create(tptal_price=cart.total_price, address_id=int(c1), user_id=y.id)
+        for i in cart.cartitem:
+            OrderItem.objects.create(book_id=i.book.id,order_id=cc.id, book_number=i.amount, subtotal=cart.total_price)
+
     else:
         hh = TAddress.objects.create(name=s,address=d,zipcode=f,telephone=g,phone=h,user_id=y.id)
-        hh.save()
-    for i in cart.cartitem:
-        total_price = cart.total_price
-        address_id = c1
-        user_id = y.id
-        id = i.book.id
-        amount = i.amount
-    cc = TOrder.objects.create(tptal_price=total_price,address_id=address_id,user_id=user_id)
-    cc.save()
-    vv = OrderItem.objects.create(book_id=id,book_number=amount,subtotal=total_price)
-    vv.save()
+        cc = TOrder.objects.create(tptal_price=cart.total_price, address_id=hh.id, user_id=y.id)
+        for i in cart.cartitem:
+            OrderItem.objects.create(book_id=i.book.id,order_id=cc.id,book_number=i.amount,subtotal=cart.total_price)
+
     return redirect('dangdangapp:indentok')
 
 def indentok(request):

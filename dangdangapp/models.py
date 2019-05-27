@@ -76,9 +76,8 @@ class TOrder(models.Model):
     time = models.DateTimeField(blank=True, null=True,auto_now_add=True)
     tptal_price = models.FloatField(blank=True, null=True)
     address = models.ForeignKey(TAddress, models.DO_NOTHING, blank=True, null=True)
-    status = models.IntegerField(blank=True, null=True)
     user = models.ForeignKey('TUser', models.DO_NOTHING, blank=True, null=True)
-    column_7 = models.CharField(db_column='Column_7', max_length=10, blank=True, null=True)  # Field name made lowercase.
+     # Field name made lowercase.
 
     class Meta:
         # managed = False
